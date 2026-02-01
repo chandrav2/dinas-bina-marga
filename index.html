@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Website resmi Dinas Bina Marga dan Bina Konstruksi - profil lengkap, layanan, struktur, proyek, pengumuman, dan pelaporan interaktif." />
+  <title>Dinas Bina Marga & Bina Konstruksi — Interaktif</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--primary:#0b5ed7;--muted:#6b7280;--bg:#f8fafc;--card:#ffffff;--radius:12px;--max-w:1200px;font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#0f172a;line-height:1.6}
+    .container{max-width:var(--max-w);margin:0 auto;padding:24px}
+    header{background:linear-gradient(90deg,#ffffffcc,#f1f5f9cc);backdrop-filter:saturate(120%) blur(2px);position:sticky;top:0;z-index:40;border-bottom:1px solid #e6eef8}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 24px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo img{width:56px;height:56px;border-radius:10px;object-fit:cover}
+    .brand{font-weight:700}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav a{color:inherit;text-decoration:none;font-weight:600;cursor:pointer}
+    .btn{background:var(--primary);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;display:inline-block}
+    .menu-toggle{display:none;border:0;background:transparent;font-size:20px}
+    @media (max-width:900px){nav ul{display:none;flex-direction:column;gap:12px;background:var(--card);position:absolute;right:16px;top:76px;padding:12px;border-radius:10px;box-shadow:0 6px 20px rgba(11,78,215,0.08)}.menu-toggle{display:inline-flex}}
+    .hero{display:grid;grid-template-columns:1fr 440px;gap:28px;align-items:center;padding:40px 0}
+    .eyebrow{display:inline-block;background:#e6f0ff;color:var(--primary);padding:8px 12px;border-radius:999px;font-weight:700;margin-bottom:12px}
+    .hero h1{font-size:36px;margin:8px 0}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .quick-cards{display:flex;gap:12px;flex-wrap:wrap}
+    .card{background:var(--card);padding:14px;border-radius:12px;box-shadow:0 6px 20px rgba(15,23,42,0.04);min-width:160px;cursor:pointer}
+    .hero-visual{background-image:url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMVFhUWFx8WGBgYGBcYGBcXFxcXFxgZFxcYHSggGBolIBgWITEhJSkrLi4uFx8zODMtOCgtLisBCgoKDg0OGhAQGi0lHyUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAPsAyQMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAEBQIDBgEAB//EAEoQAAECBAMEBwQHBQcCBgMAAAECEQADITEEEkEFUWFxBhMiMoGRoUKxwdEUUmJykuHwFSNTgtIWM1SissLxQ5MHRIOj0+IkNGP/xAAZAQADAQEBAAAAAAAAAAAAAAAAAQIDBAX/xAAuEQACAgEDAQYFBQEBAAAAAAAAAQIRAxIhMUEEBRMUMmFRkbHR8CJScYGhwUL/2gAMAwEAAhEDEQA/APm+QAsajl844lJBof0f00EJluGF7erR3DyuypWoIPJq/rlGtmZVLKQ7g7rhvNob7JWEhyAEktmFgrcr58Y8jDS0GYFvU0A3HtAgHUW8YDnzQkEasAkhgniSLKPHhBVj4NIqVpqbcYqRLeEoxi1KcgpSUhOYAshD9phvJAEOMFNSo/uwyRvawppbkawKA2y0SIHxMloaaPEZiHEEbTBiZCKxdYxYJJekSVKOtCD+qxu0jOySZMVzcCCXFFeh5/MVhnLlRb1cc7NUJOqJ7KhXSrHmhVieBYxdKXXKq+hZn4EaH0Om6Gi8OCGIcRTNwlGUOsRxqof1D15wgBhhW7tBu08oqxOFSsMtII33/MQX2k1BCpe/VP3ju4kU13xc3gTodfn4PCoDH43ZS5PbldpGoYGnEWUOP/Mew00TdGUK6nxBHabz8I1/UDSh4fEWPOEu09hZjnl9lYq6XAJ5CqTxDxonfIgeTP8AZmJzJs9D6ihPCiuBgqbshQSFIByqqAoEBX3SRf8AVIb/APh9KE/EKGIlpzystW72YkdoWUzFno5BakfTcdPw86WUMCQCtvuJynP7nNiQYxeT9biunP8AY3SjbPicuUoEsCFC/wCY15246QbKniyxlNn9knmbHgY2OwMIgnGJmkoEhSAFZxLBBmLQCVZVKSQwsGc33HbQ6IzCmYmVPWVpxDJ6woT+6KUKUp0gOU9YpejpBo8W/cDAYnDN20sFeihuPwMVSVhT6EXBuDx+cfSZPR+SlUwCdOUhM2VLGaepLJmSkLJH7tRKu04SWHEQNN6Op6rrusxGeWZ4MrrMsyYJU7q0lqjIB2lEPcNeBAYNUh+B0Mc6pX2fMxfKXmJSoMsXHPUHVJ3xPq4rSKxBgsuiVEuwAY9k6Gt7FxugqctFchIOU2Tdr5t2td0JUZrijbjFqVm/xZxqINJNlmImk2toKsOFdB6RBEpquCRQim8U5UrHCaOAz+IbcxicpPpX4N7ob2ESxnWKdSi4HGge1BbSLEzypJbN1jBIUkkEpueZ0b0j02cCkpqTQeoIDeY/QhxsHY6J0pSrLCspG4Zkl+BZ/KBN1uPklsBK1IcpziwNMwb2agBxucDc8N5MtJcA11SaEcwawdgcAJY3Fq1p+vc8TVLQv6qmNwQcp4EVBiUyqFkvDtpEJ8qo4werDrB7JzDcq/goD3g84jMSnMAXSrcpg54Gx8CY1T3Ia2IokNaLUyjBUuVE0IjJloEEuLOrgoJiQREMoWTMLXMnsq3tQ/eGvv4wIqWpJbKGN0XSeMs7/sHw4vuriK5AIYgEHfDTFQmEkKDpV4HTeN4OjG26JoVl/vA32rp89PGLZ+EUg5pdd4Jv468zUbyOzEsNiUrcaiiknvJ+8PjF0IK2etMtfWBCVEpylyQ6SQSMyQToCL1AiWJ2zLwqesUnMXuoOjMSSHCHJANQCzkXEC/RWqkkfd+RoffFoQSGUApJuwuOKT+cYvCnLUaxyJKnFP8Am/uWbCxwaYoT1FK27SCsLPeJzGWpLqqLteO9ZLLtPJ7WZYKZ6iSeyVKSqaDmygAqZzUVpGdm7JVKUZuEIUPbkk/6TdJ4H8oNwOLRPFO8nvJPZmoOtm+Ea18DKxrN6QykFlzpsrNlaYg4jKpQGUpKkr0ASGVvYWcATMXLR1azOIKcxTNljEKCFTGMxmmuMxzEl+0Ql9YrnSSX9reCAFEcQeysaVA5wsmYTK/VHIdUl8rfdNUeqIpIGBKxBJ7b0JyLSO0BoQK5gQzhzS7Rz9pD+PI/Cv8Aqi2ZMKaLSEPvbKXtWxc78r6PaK2+yr8U3/44uhCDqSksoGtWYihqPCLShmFLPTiPfBKQQe1Vg1asGIpxFxxiyZIGYZFZmDnRmP6tCRILIlu8EYXArNQhSklwSEkhqUceEP8AYGGClqdFMrsKsy0lnPGlLQftaSZThIAROW3ZcHtAEkngXYbiYljS6mYk7HXMKgiqMzGtAU9l33Vd9z7oJOzpssLUCoLAQhe8rmrYhKhowQR96NjsbBKlI6st2dQGd6vx9OWsFrwgL8VJUeaSkj/SIe5VGDx8ubOm5VANmSkF10zu1yQAohrUcRrNm4RKEJymYA3dUQcu8MBcF7QyXs5CndIcgB/unMnyNY7iEMIFuwqtwQhjFUxGZwQC9wavFoLx7LGugiynqSnuFvsntJ8NR4FuER+kt3xl43T+LTxAgwJcR7IIWkdlYVqC8WoVA30MXSSg/ZseaTQ82fjFapq0d5OYfWQ580X8s0JwTCw/NHFKiiROSoOlQOhbQ7juPCJkwvDDUQXFE3CBRCrKFlC44cRwNIIjoEVpFYLKxOVQRMGVRsr2F8j7KvsnweDTL1FD6GOKlhQKVBwbgwOSqVc5pe83T97cPtebVVEOJVly5aVXFR4EciNIV7U2PnIWhWWanursrkpu8OdYbhQPv4j5jj74pXM3+fz3Q4xE2JZG1CFCVikhC/ZX/wBNfInuq4FoPnYdwLKFw9xxSoVHv4xZisOiYkpmJCknQ/DceMI1y5mE7oVNkbh/eyx7piedovSFhE7CGyTf2V8bsoX951MK/wBiI/wifOV8odyMYmYkKQpK0nw8DoT5Rx//AOZ/y/1Q6FZk5csih+fA+FIKlIa4erEAPyYRalkhHHhQ1bkbX3vGl2bIw60qUCUHtCpBFcou7u+W7XO6MGxVuXdHpTkiiTK7GVu0xJKnf2SbNuvpDw4VKgkEBk1HChT7iR4wtnz0InOCxdZUeCRKzA+BC+Y4wywmIzISpmzJCm1Dh2MVpdFpnZqWiKI9OngRQMYI1WNtcEuaTD0NFU9jSBvpMUrnwo4HYPIjy5Q0MQaOSpjlouyxtprkhO+CoR4xMiImCgOJMeVHo4YVDspn4ZCi5Ha0UCUqHDMKtwtFB6xNiJg4slfmOyryTzgsiIGCgsqkYxCjlcpV9VQyq8Ae8OIcQSIomS0qGVSQobiHHrFQwy0/3ay31VuoeCu8PMjhBQB4iYMAJx2X+9SUfa70v8YsPvBMGpU4cVBsRaFQwWdhymqA4vkdm3mWfZPCx4VMVpmZgTdqGjKB3LTv+e6sHgQNipLlwcqxTMN25Q9pPDyY1goAc0tUengY8FPaK+srlV2FnxSvlx4UNNRWOKvuOnHkdeUMBXjdlFKjNw5CFnvIP93M+8NDxEDfT8V/g/8A3Ew9CtDE8sKgMlMlmVmQqho48dToaDSLpOPKFFWVNaEMCg62toPWG2Iwklf/AJhLsRUoCjRgCTYVNhrwhdN2PPy5UhMwAAAoW7BybEj3axxrLB9RuLLFy0y0/vVLUopBSkdlLEJCgpRc+y1BpGyw2LCpSVpDA6buH64RiDhZwSAqWpLVCSC3aDKSNzh/LSGWzNrzKSkIDDhfdWkb4si6mbsfzFvFbQQmW4BIIO46Rwyo9GNVsc7spaIlMX5I9kiqAjg5dYJWGoYngU5S5iU5NTHPN3I2gv0g0cMcxWITLAzFnsLqUdyUiqjyhHtPac1KkuDIlEd9aAtyDZQSr92DxryMSyx2Y5FWGnhaQpJBBsQXB5GLIAPExWYkTFZMIZMRIRUDEs0AF6TFBwKQXQTLNzkYAnigukniQ/GOhcWJXCoCozZqe8kLH1kUPihR9xPKOIxKV901FwXChzSajxEFJU8UYnCpXdILWOo5EVHhAMonSwoMQ4OhgUoUmhdaPNaeY9sevOLpqVS2Zbjcup3UUKtUXCjFi8UAgqPZoWJqgkfaFL6FjwhNoCgtlzAhSOfuOvI+cUfSE/Vm/gVCjbOOzZTL7KiO0GOVSqCuj1Fb0F6QvzzvrL/F/wDWMXl+AGrwvS7CrooqQftpPvS4hlI+iTu71Ez8Cj5XjJ7R6K9TKKjMd1JALUqFON/jSEM/CKTpHC+xR/8ALaNtb6n1JWyZQsjL91Skf6SI9K2dKSp0mahwz9Yo+HaJpaPmmE2pOl9ybMTwzFvI0htI6W4kUUUL+8kP5oaMn2bPH0z/ANY9UeqN9iMGEJzHEzfFMpX+wH1hfiFqQQOuQXD1lE+qZg90JsL0wQxEyQS+qVP6KA98Ep21hZrOsyz9pJ96XHrDx5+2YvVbXz+gpQxS4G8uVNV3epX/ADLQfIpVHVSpyamSP5ZgP+pKY7LmoCU9VMlrH2VBR5NBuJYgLQ4CU1DkBSiQEjxNPGNI98STqcReVT4YnnbSKCAqTMBNgOrUTySlbkeEUzcdMUSCiZKTvEsrWeWUFKf83hGuwexEpFL5Q6rqUrUkmp5aRObsclLggHx98bQ727NPmVfyiHglEx+HnyUOQFgm6ly5uY81LS5HC0TVtCTrMQOZA98PJ2ypqfYf7pB9LwGtJFFAjmGjthlhP0ST/ghprkWScTIFELlM7slSLm5oYtMxJsQeREEzJYNwDA0zBSzeWg80p+UaEkSIgpMcOzZP8GX+BPyiB2fK0lpHIN7oBk49FX0BH1fU/OOjAo3H8SvnBQFyRFgEUpwCftfjX/VBEvZyftfjX/VBQE0JijawWmXnR7KgTfu6nwvBQ2egBy4G8rW3qqBtqokBBQXdQoQ7A6EqJAZ21iMjSixmSn7RWsJCyApLhJapJCnB3CkMF4srlJQlkhsyRuDVBfn6DfRbitiCWcy1EjNmcA5SgXFddL68oKxU9IQRKCLhgKKKU6M1vGPPnN8IBbiCUEqSoBQqWKUsXNS5YitwHDCF/wBJm/V/XnDc5ZZ6wKRMaz3SVAPT2kvQc7RT+2vtH8SoSfsIabd2yVy5jdkIm5Sk9oK7wzA0IY6cYzGJxxIAyjcAPGO/SzLK0LBS5qkjOmhpVRffF2HlpLqAeuZ7AGjMNOUdNmpzAPmGZKspoSxYHjuhwMMlu6PKKE4/MCjKBS7+toJlqDXhoQvmYJiWNIj1BEF4tbBxAqMUbEQMCQkE+y/hBuEx8yW2WYsDdmLeRpEZOKyptBi1OASBGcoqS3GvYc4DpriEAAqQsfaT8UtDvC9PQf7yT4oU/oR8YQbI2bIXLBWl1Kff9YjSLMV0bQayyUnc9PWOWfduKW+n5D8VmywvS/CqutSPvJPvS4hpIx0ib3ZktfAKSfSPk2I2RNRUEkMPOx8ICRNLPcb45J92peltFrIfY8RseUr2cp3pp6W9IWTujpulQPA0PyPpHz/B7YnI7k1aeAUW8rQ5w3TLFJupK/vJHvS0EYdrx+id/nuFwfKHk3ZRF2T97s/5u76wPP2StNcpbfceYpHcP09/iSfFKvgofGDcP0owaquuSfukV4hDg+IjVd4drh64X+e32F4cHwxKcKrdEk4NW6NRKxsqZ3ZsmbwJCV/n+ERZNkIaqFI4mo8wSB4kRtDvrHxOLX+/b6C8u+jMv1GUZlEAC5NAPEwDjNuJlgFKc5BOcAhTBqF0kgOYbbQnKXK7KZZ7RHbBKVCrMRb1jFzNg4tWbKAElJZEtVFHO7AEhiaV4R1+fwyX6ZEPFJcoDxW0ZkxSpUtSw5JyFT5SC6u0W0elbRKYrtmV1mYJNCKg6s9gaU5RCbstUmW65ZzpuGJdIuz0JrpWlqGJSJpSStIAWXSrVnqcrOxoRGUssZEPYJxSps0uwSl8v1iQ7ul2GvKnCEs/Z5H7zrMpcjKxDAUu7gUUP+YbrkrKEutAqGSC5FHLZRxFOcZ3Hy56KnV2q7h6Nq3z4xnFNOgBcfiTalAzhqsGDtAnWDeItnSVlqbxT1fzgfIr6sbqikhijFS52UzVMsDK7X7Si5P8zeENMJs8oSXIY1d9IzycIoVIuaA8ah/OKkTlhwXpo5byirKNHKmSws1Bp/uFPQQYZqd49IR7MUghRtb0Lw6S0UgB56gRcQP1oaCpogIQwC8HOpUU8IYzJnZ4QpwwdMHLbq/D5QgNT0axKlpZITlQkA3zO6lONNbcIdKB3tyH/MI+ic5KEzcxaoanAxojMSzlSQCHqQKRrF7ENC0bQkA5SsPWhcmhq9KQn29jEGSZclDhxUBhd2Au9oYdZhVoKFqD5lV3OTYtaMLtfFL6xWVYyFasiUqFsxYkCz8YzlPYrQ0Tl4homrGQunzFpYKI3ioN+WsRRMcKJoySRz0F4woo0+ydmT54zJSyK9pVATw1POAp05ctRQtJSoXBuI+jYUploRKCS2UMQKdlgxO8/GMl08QlSUT0vUipBqFZ6V3FDt9owKNqyXJJ0JvpkXStsTUdyYtH3VEegMIxOiWYkU0u24QnCL5RW46/tViR7aVfeQk24hifODMB08WgjNISW1Sop9CD74zWHnICTmS50LkNz3xRtFAQoJdJIDkpLirUcUp8Yzl2XFJbx/4UpyXU+j4Tp9hVBIWmYhiSXS4L/dJ90Sl4zZ88jtyMx3kS1Hzykx8pVNiClxzvu+C9LaK8Rvk+vYvonhylPVrWAxqkhSe8d9dBR2pCHaewVSAVhaVJcVIIUCpSUpNHdnO73RgZOKWkuhakHelRT6pMHJ25iZkubLmTlrR1ZLKIJdJSR2iH03wRwZoP12iZaH0LZhKXzEaMxobqBfd+UAZhvT6wINoHMks6U6HW9/1YRz6crdHalRjQwVjypIBV2WZh+bxSVpbM1X4VAAap1cmFieceVMLCsW2WHqnEDshnpQt7hB2BxKwGK9NQ/wARCVGILMbRouhah9MQ5SsZVkghx3DceMUmgPYjEHeLQP1saubhULQJi5KETVYGataQlkpWkoCFpSapNTxifSLYkuXLxUyWlBYy5aEgAFMzOMwAFA4WgcYepDSZlpc5k8SWHOGEqeAGY3FQHqwf3Q22vsKTJm4YFKhKzGXNV2u0pCAc/wBlJLuRQAGzEhLt4CXPShKSgKShTZ86SVliqWq6kULEsaGkKwqguTtFgrLmBPD4R7DzgXzly+otwAFh84Z7Q2LIQohKpgZM1XaKFZurCcpSUigJLMWMex2wzJKUZnSqcmWnMPZUnMpf8rKp9mIlJXRrGDqxVImSwC6k3PtN8YU/QQSVpILm3MxfjMMRijIzmqwhJsGWzKvYuD4wfI2JOQtCCpJ60rSm9OqJBUT9Us/lEtgouTpGdxYymK0EqISLksOZoBDZewpigFIrmOVjldwvqy72D0fjCnGYFaCUkA5QFEguCFOxFa2PlDTFKDjyfU9nz1zpUpPaE2W6FkAlKgEtmBcJIUyVV1BhB08xxyJRU5VhBL5m6tKwAVG6lEqVcsAHYmEuytv4uXLMwJzSwwKqguWZykvVxcVeANr7anTgcwYe0z1y17RN2v5bhDTaVdAljxt6lJ+yr6/n9AvXROViDVtx9xeAlJNaK8uMSwyu1f2Vf6FQEF3WHlEFTiTUvziOZzUgO/utFQln9cIAOmZHhMEUE2jhfdAAQJsFbJQVqWhIdS5UwAC5OV29IVlZgvY0wpmFQuJcxuYlqMRLgRfgtklSXUrKSWSCKvSpeydP+I5+xz/FR+GZ/THZiEgCZOqDl7qiFJCqpJNHFzdwW3wD+0ZX1P8AOr+qFbI3DxipYSLkgWgBc1wHG/3mKhPfWJFR3xpZZIkV5RLCbQXJWFylFKmKXG43EQVaKUzzv9BCAcS9vzlKWpU1RUuWZSiWJKDdNRQcmgo9IJ3bJmP1i0zFUFVy8uRTNQ9lNr5Q8IpU3l5D5R7PcQDseDpTiKOsqaZ1ozkqZRSUlIeyCCRlFKwJjtqTJyxNXlBSEpSlIyoSlHdSlIsnhxhTLmOpoKXImfVUG0KTpejaVeALNphNrTlSDOyYdIWmYCkHKtZOVK15TdQpruhzN2liRMCVypalFcxSGWClBKCFhR0AzksfrRi9hYaZiEy5MvMkIUoTlFIypSpWZIGpURQgbg7Xj6hj+jcmeggTZiSZa5ZYJyHrcrkhgSeyA72vGc5Qvc0jllFbGB2tOmjES5syUlKks4C0pCzJyk/dcZWHEM8FK2nPSQVYY50oWlPbCklupQskCveSaA/9TxhL0vwU5OKmBmCQkJP2AlKUnxb1aDsPt6WnDdSrOVZFMoJKSF9Y5ZxR01q4GWsWqa2Fqd2G47bS5aVJXh1pRn6xnS2ZU0zACQWKSAsc0jdAc7Eo6tjhp2WYgAL7LlCUKTmOWhLzE03MX0inpDtOWuWvq8xJMsuZakBRBnZlFqA9pI4l4Dk7QRkloUZrZMpVkUclJZCS3f7pYt3QIKQ3kk3bL9jz0yk5JomhZU3V5HCkEoehLv8AuzYaRCdi5WWZkTMBmILJKSWKpaAO0BWrlxTtCLJW05XXInKK8yEqTkCFZnJWQxNCWWfnHJ+0ZAAYkBJSxyrqkLVelOyJVOMURYGjFMllFYpXsrAoQS5au+Oz5gVlAo6CsDeMhHp8IiccClQzEkhYAyzB3kK1U7hyBWorpEJGIASl1kEgjKc1MtAczNyEAhzM2lJmp/6KaJcFIzEpCx2SxoSqWSNQk1FYrxM6QU5UCS1K5QFEGWCQSGLhVy5G5oHTjpaVqUJiSVzEr7rgJBAILihZS/OPT8XIUhTlJWZbOAzTAlanbiVNTcN0A7FpRLoWSwqQ5c8KHgbRTjkpCUkBi+hNmL3J1HqYXBA43I0i4pFLwrEReL9nTD1imf8Au53n1E2KUpHG3xhj0YA+mS7kEro13lTKesRP0sAJEwoKQWWAQSk6al9/5CDv2rL/AISfL8o1G1OjPXZ5kpKitACRlFXNAkjWlxpSFf8AYjaH+H90QpxfJFWZCWt6NXhBSCRZJPg8FYLZc0KSeomFrjKqvmKRoMMnEJfLhZtT7SW9YrWl1NEjKzlK1S3BmpWBwY0eN2Ni5yysyFuwDACgD6k8Yijofiz/ANA+Kkf1QvFh1a+YUxLIqYn1d6eUaGV0Jxf8NI5rT8CYt/sLjN8sfz/IQnnx/uQaWZXDqCVBRSFgXSXZQ1BYgwyn9JZhU6Zac7qAPaLiaSSjK7EOWGsM1dA8VcrlD+ZR/wBsLl9GpslaZhWk5FBTB37JBo+tIXjQeyYUz6T0Ww/UykicE9YQ5SGACjVTb1E1Kjr6kbX6SdUDlZLeyaJ5Fvf/AMxi5PSx1BSyQdwZJ9xPg+sWYzaC8RNyypWckChAJs+ZzRIfUtpGahbuRAyxnSiROSmbMlE5FJCloIdKKlwSGLECh+sfHLz9sDOvqB+6JVlzjtMt83dIFXItbQQ1l7PnLnKwy1AKV2CBUAKRmfR2BfwhvK/8PZIp183wCPlFSzY8VW+hootmQx+01zUFKiGoKA0AJXSu/wB3OK/pUzIEZgQkMLggdWUUY8Sa6mNynoDh/wCLOP4P6YtT0Fw2qpx/mHwTEPtuIrRIwv09YVLU6XQSQW+sMpetae4RTjcctSSjs5SwoGPZCW1+yB4R9G/sRhdRNP8AP+UdHQrBm6Fn/wBRXzheex+4eGz5v+0JmYK7LguKGlG38/OLUTipUtNO0GNK99Yj6MOhOC/hK/7i/nF8vojhAUkSapt2l73374PP4/gw8Nny+XtFZbucaHxJrF03aig6ksSQygQWoSrQ0qY+oJ6LYMD/APXR5n5x4dHMEP8Ay8nxA+MT56PwYeGz45jcQqacy2zPcP8AOJLCTlYEF6uXDR9mRsDCaYeR+BJ+EXI2PJB7OHl+Eoe/LD85fEWHh+58Pkyw6XIFwfOHOwcOn6TKGYA9YEv945X9Y+uJwEsWlIH/AKYFfKJZ5csKKsqU0SWygseXB4T7TNr0P8/oNC+IswuJMpKjJK3Qo9kKSETVApSorcXYXBYGC/7TTv8ACn8SfnE52F2c6UqXUO2ZTtmq9mqRAv7Bwv8Aipf4h84TyU9xaq4OYjEpSCSfDXhAOL2sLC+j890L9oY2WlQCUuMpDrWososA9XDVpAcjpBJzEKQkBL3MwvpoeHpER7Klyw8TcbnaRSHUw3Xry/WkXSNrS1DvPyru+cKP7QShXqZQDajMSXFn0AevKIK6TzEvlQhKtGSLMOH6pFeXh8Q8QbjbY1lrYXNB6QxkTwtAUlK2P2VH3CMjO2zOmhlrUUkdoAFt4rurbhBOD2vPyAGY25gXAszORutCfZ8fuheIzRTiwJKVgAVJSoAeKgISY/Zk0lzJWU80j/dAGOxOIU7rKksBox1L0tw/R5M20lAyqWoqZynK5DCrVs8NYcceLB5BTgtnATSZmGCk1B7SBV71Ve4jU4DHypKWRJRLB+2gORvKXJMLvoKAM2UOQMwCiHr2iCagimooIWT9nKSoEklQLhKQFG+YECzPvjRqE+fqSps1uyZaTiJs1WUEKoTmNcol9ksH7p3Xg/Zm0hNzqzgAFu6SN31hujL4jaQSGyEFdVAWGahtV+AgZSF9yWnK6ARVk5kmhKgHUpmL++JcIOm0OU3exvfpKAQDMNdyQBxuotp5xRi9pSJbPNXU2/d7w/snfGSyzVKBKu7R8tVKZ2VXg2sVIKiSVTZaw4fKMpS5cPw0YtaGo4/2oFNmsxHSHDpIS5U+ue1xVktAmO6TSEh0BRYn2ltQs7gjnCKZhnXSWApg5dhc3HEUo9YBxIKahIavZYEqJehB8b3i0oPhL5D1N9TW4npRJGVkZnZx2zQtYksdY8rpOihEkNV+yi9WY14+kYxc1WUJZT62BAId/CzAbrxd1hzKKgGZ3DF39WpciL4A0MvpNOJOSWlnLMEhg9KgVpyjkrpPMKQnM01N0XdiA2ZwKj/mM9OmEOHBDPUu3MBv16eCkqRmYaAUZvusbQOwNJO21OK6TlV7OVABUklzUKNm190U9auYSnriSAVEOSynAdhUi9D5QmE8Aug9osVKYF3oLM9bEgx2XtAZmKSljmEy5NK2ox5xD1E7jTCz3NVLUokhQKquN6KU8rDWKcXJSt8qik3ObM3BVeDhuEUIxT5mPaL1UAQsBqZmrTiGpF85Z6qxFqsk61zEOSDW7mJrcAaegpCfaP2SlQUBuF9bRR9DP1Jv4R84b4ZRKAyU1D5Utd9FPel6RW6/4S/L84QmkZ2VPCxmBFTQFnOlPz/OLBkSpOYM4pXjc6E+cJhhVBZLgpSOzZ2DcKpuIIxs/MjO3cUCnK1HF24PccN0aVvsSHLQlacqdDRTd00sb14vHZSEqUMisxScpDlgXYN631ELpGLmKTmUKaULkMHYau97QVNnJIzZgHfQqYCpO8VavOFug4DpThIMxTEXAs5+sRzHlFU3FDvITYlyCC5FWTXeB6wLjVzGCkFx7TOWcDyEXrVQKABUR9kCj0JbcT6xNXyHJ2eJoUAg07TlTePZN6va7xcJ0uYexlzpAS9Q24pbz5mBFrmKSEk6kijgcCQdX5ViUuUlOZai5uak6VBBG4cLwAXYBaOtqrMurlyNA1r6DmY7KnzEqHWMGUciizqBfKCRYVs2vOBMTh85C5bAntBxVxcEtS/uieGnhQSpRZaWdT7jV6ACxI1htKh7B68QFFQmAoSCCzMVE7mNbf5d8R6xKCAVKyqqFABSiTv86U04wPPUiYElSiQCQLkEG2YnUc3gifjQlOXJcXDM4Avb9CEARiJoBbMcpS4CT2iQam1NKg++OLUoKfrCiWpwQRamhd9xbiYXYbEzAkhZOck9uhIIALUFaF24QTs+aojKqYQxcKCU9tINQ1S9L8IKCi2ViOsK5ScwCKZixPqLOL3847OnuSnNlS3ZUWZiLwHN2gDNDMdEqAZR3jSgYhosxc7KapzV7JsxNGIJvQ+m+GhpkcfKJy5VAEBwTl32cCxa3hA6lJUlwnM2jVFWIa7X108mEtZ9nKAftVBJqGFG9ITT0qQScwykkBqM2bQcX84tMeoOm5moAioYs+Zg7A749KWFAGuW/ebLV2MUKnBQT3iUm5FuTGoY6xbMn1Z6mgYFyTuYlz84oqyYNVKCQFAUdVVBwxF2c+6K8L3SSQ6llwXIa1d0FypKED98cxbu0DVd1EQ2kTUAABKRSwCacxG0cLfJLkIZ5Lfu1qDbiWPMch6RZhNorBKchu7k3JqTyNaMYdzkyliqWO8MCPnAkrZJJrNSEinPmLb9YmeFoV2BFaQoPQCtGBD3L7q+kT+mHevzhnJ2XJDFSlKI0FL3rX3xf9Ew/wBVfmfnEeEGkwq8eXYrKSd28cvkY6cWZT5xfut3WAAo3yFoBlqL3fXw3ncKQVNWhgFAkHuhweHnE0BYrGlaQQ9VAPRj4PSPJWo9hUspS3Bg/N68OBiqTtBTdlApegFHavLlHsWuYWADVdgQXYV1NKwqEGSRlBGYFN+1V72FnFK84hh3A74WDokkVsQOAfyiiRMAGUkHNwIIJb53itEhUtynNTVwKloKAJwWMIaWQSFcXPIeQ8451ZJUJiqO6akgj7VBoIrC0Euo9obiRw0O73RRjWUHByjQfkIEtwrcbGekOKdkaUIDAXAbdAuNQSgkMoC9QQwFgxq/KFiVLULkfFq2iySsqBBURvpxpAoUFBmDZSGKgB7J1el/lTwija81aSwJKLverR7Ey1EuKDhfSo4x5eJDsQTz38RFxW5VEdlYgZwCCUl6eBqOMMFYsS6JHZKnT2qgnxrQxXhsUlsuUAcIJw+AEzshQpVj8GipQtg0QmbRRmHZG8Fqh6ltHJD+JieKxSZjMCxOZnF/Kn5QXI2KhIZaqeAPJ30gqVh8OjR/M/IRKxi0iJAUFPlNt/h8IY4bBLJcIUoHw9SGag1honFJHdQB6e6PHGrOrchFaEOkVS9kzFd7KBupTwEDYuSiQqinUU3bugmrVvQeUFGaTckwq26KpVozHg1Y0gkmDF6NoAzHKstXDlrO1YPVtlKaKW53B1Rm8OHWToPjQQNMmOSd/u0ilN2DjtZqP7Rp+qr0EEYfpGixCgN9C3lGPC4tknMoJ3kDzLRWtk0fTJc0EAjURZmhDtCeoJARoQ4BYgCw4aQE8z648xGVliHDLHaKtddePwPhE8UtwA7n61RSBwjeafq3nFwTStffGdbiPS1sGDklq8XuD4QWHyu9RUVrW8COaMLHlFsqSouSm++3mYKFRUZD6kqd3FouVMV3SfI21vFyNnr3hIvrBiNnp9ok+kOh0KVSS7Hk4qK1Y+cXypRsHPL4aw0EuUNA/nElY9KRQe4CChgMjAL+qG8vfWCkbLq5V4Bz+m+ERXj1aMOX5wJicUWdSiRzh0gC1qkocsTlo70cCwbyjOzZlzHpmJJSE6CvMxPD4UrQo6+zxIvDWwP2OYedDKViiGINYSS1QTKnCzxQjUypoUArfFoXCfZeIoU+P69IO6yEAZniSZkBGZHhOhWMN62FnSKY8rxEcXj0gs4eF+18aFIKRwr4iCwFXXEJKd8ckSCoKOiQ58SwHOKVKhlMR1csDU187wMOQbEpYJI1HqIu2Wlzm1DNuff6RViUkSkvqotyaC9gzAMw1ofD9e+DoHULTh5qlFQ7Lm7t7qxd9AX9f3/OLTPjnX8YdsKSAk4PerwEXJw6RevMwMZhe8eeJAPTMSLN4CNX0F6S4fDGd1zoUsJyzAkqIAzZkMHId0ncctbCMMDHXgA0atuyOunr+ihUuYtRlpKyjq0KJYAJBANrWZhEf2vhmI+hJq7HrphIcM7qcvru4RnQYk8AD1O08MA30MGgBeet3GoOWhe7U0hj0S6SYaTiJq1o6gLlhMtSQZvVFJGb7RzAVUK+ZjGTVREGkAGi2ztjCLxOJm/RitExaTLTnMnKAlpimQ4damU1WcwBPxmGW6lYPkkT5iQGKjSmoIH8osSSUskuYuJhDCxtvBEqfZye05pOmUNGy0GQODbe1hHsJtnCJWknBFKQXUEz5hzBlBmVxKS4IIy62hBiwyj5xBBhiHOJ2jhzKmIl4RKFLbKvrVLMuqCpgU1fIbmmdTbo2vS/phgJ+zUYeRLImfu8iChhhihusKV2WFgEU+tHzMfGOvDEa+T0kwiZiSjAIy2IUu7hnPZJpzY3IdmOPSPDJDHAyv8AuK47xx5UFIwYMXaPCYzVTOk0h3GDT7NOsYdkv9T2qg7w24khbR2sicUZcN1eUjMEL76QEggnIMpOUnM9M5paFkuWGBaLoANn0223hcTKSJbFYnZkBMvq0yMOJeUSg6R2lEgkJKk9gEF7pcdjNn5XGDVQAH98qoBFfvcTCRRgPEd0wANZm0NnEj/8OaA9WnGodR8LpDVYC8X4zEYWal5eHXLU4qqYVBgA4SnQO/6oMqIcpNuUAFO1lUTz+EV7KPaP3fiI5tKw5/CObN9rw+MMBsVRzPxih488AH//2Q==');background-size:cover;background-position:center;border-radius:12px;min-height:320px;box-shadow:0 8px 30px rgba(2,6,23,0.06)}
+    section{padding:36px 0}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .services .item{padding:18px;border-radius:12px;background:var(--card);box-shadow:0 6px 20px rgba(15,23,42,0.03);cursor:pointer}
+    .projects .project{display:flex;gap:12px;align-items:center;padding:12px;background:var(--card);border-radius:12px;cursor:pointer}
+    .project img{width:160px;height:100px;object-fit:cover;border-radius:8px}
+    .org-grid{display:grid;grid-template-columns:360px 1fr;gap:18px}
+    .org-card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 20px rgba(15,23,42,0.03)}
+    @media (max-width:1100px){.hero{grid-template-columns:1fr 360px}.org-grid{grid-template-columns:1fr}}
+    @media (max-width:880px){.hero{grid-template-columns:1fr}.hero-visual{order:-1}}
+    @media (max-width:600px){.grid-3{grid-template-columns:1fr}}
+    footer{padding:24px 0;background:linear-gradient(180deg,#ffffff,#f9fbff);border-top:1px solid #eef4ff}
+    .footer-grid{display:flex;gap:24px;justify-content:space-between;flex-wrap:wrap}
+    .muted{color:var(--muted)}
+    .chip{display:inline-block;padding:6px 10px;border-radius:999px;background:#f1f5f9;font-weight:700}
+    .list-compact{margin:0;padding-left:18px}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:800px){.two-col{grid-template-columns:1fr}}
+
+    /* modal styles */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(2,6,23,0.45);display:none;align-items:center;justify-content:center;padding:20px;z-index:80}
+    .modal{background:var(--card);max-width:900px;width:100%;border-radius:12px;padding:18px;box-shadow:0 16px 60px rgba(2,6,23,0.4)}
+    .modal .close{float:right;background:transparent;border:0;font-size:20px;cursor:pointer}
+    .detail-grid{display:grid;grid-template-columns:1fr 320px;gap:12px}
+    @media (max-width:900px){.detail-grid{grid-template-columns:1fr}}
+
+    /* small helpers */
+    .muted-small{color:var(--muted);font-size:14px}
+    .link-inline{color:var(--primary);text-decoration:underline;cursor:pointer}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <img src="https://pbs.twimg.com/profile_images/1701808548697796608/6pSuOgNz_400x400.jpg" alt="Logo Dinas">
+        <div>
+          <div class="brand">Dinas Bina Marga & Bina Konstruksi Makassar</div>
+          <div class="muted" style="font-size:13px">Pemerintah Daerah — Infrastruktur & Konstruksi</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:12px">
+        <nav>
+          <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" id="menuToggle">☰</button>
+          <ul id="main-nav">
+            <li><a data-scroll href="#beranda">Beranda</a></li>
+            <li><a data-scroll href="#profil">Profil</a></li>
+            <li><a data-scroll href="#struktur">Struktur</a></li>
+            <li><a data-scroll href="#layanan">Layanan</a></li>
+            <li><a data-scroll href="#proyek">Proyek</a></li>
+            <li><a data-scroll href="#pengumuman">Pengumuman</a></li>
+            <li><a data-scroll href="#kontak">Kontak</a></li>
+          </ul>
+        </nav>
+        <a class="btn" href="#kontak">Hubungi Kami</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="beranda">
+    <section class="hero">
+      <div>
+        <span class="eyebrow">Peningkatan Infrastruktur</span>
+        <h1>Membangun Jalan & Jembatan yang Aman dan Berkelanjutan</h1>
+        <p>Kami bertanggung jawab merencanakan, membangun, dan memelihara infrastruktur jalan, jembatan, serta fasilitas pendukung. Klik kartu untuk melihat detail atau buka di halaman baru.</p>
+        <div class="quick-cards" aria-hidden="false">
+          <div class="card" data-type="service" data-id="lapor" tabindex="0">
+            <div style="font-weight:800">Pelaporan Kerusakan</div>
+            <div class="muted" style="font-size:13px">Laporkan jalan rusak, jembatan, atau drainase.</div>
+            <div style="margin-top:8px;font-size:12px" class="muted-small"><span class="link-inline" data-newpage data-type="service" data-id="lapor">Buka di halaman baru</span></div>
+          </div>
+          <div class="card" data-type="service" data-id="tender" tabindex="0">
+            <div style="font-weight:800">Tender Proyek</div>
+            <div class="muted" style="font-size:13px">Informasi lelang dan dokumen terkait.</div>
+            <div style="margin-top:8px;font-size:12px" class="muted-small"><span class="link-inline" data-newpage data-type="service" data-id="tender">Buka di halaman baru</span></div>
+          </div>
+          <div class="card" data-type="service" data-id="perizinan" tabindex="0">
+            <div style="font-weight:800">Perizinan</div>
+            <div class="muted" style="font-size:13px">Panduan perizinan konstruksi.</div>
+            <div style="margin-top:8px;font-size:12px" class="muted-small"><span class="link-inline" data-newpage data-type="service" data-id="perizinan">Buka di halaman baru</span></div>
+          </div>
+          <div class="card" data-type="service" data-id="data" tabindex="0">
+            <div style="font-weight:800">Data & Statistik</div>
+            <div class="muted" style="font-size:13px">Informasi kondisi jaringan jalan dan inventaris jembatan.</div>
+            <div style="margin-top:8px;font-size:12px" class="muted-small"><span class="link-inline" data-newpage data-type="service" data-id="data">Buka di halaman baru</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual" role="img" aria-label="Visual infrastruktur jalan"></div>
+    </section>
+
+    <section id="profil">
+      <h2>Profil Dinas</h2>
+      <div class="two-col" style="margin-top:12px">
+        <div style="background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(15,23,42,0.03)">
+          <h3>Visi</h3>
+          <p class="muted">Terwujudnya jaringan jalan dan konstruksi publik yang aman, handal, serta mendukung pembangunan berkelanjutan di wilayah.</p>
+
+          <h3>Misi</h3>
+          <ol class="muted list-compact">
+            <li>Menyediakan perencanaan teknis yang berkualitas dan sesuai standar.</li>
+            <li>Meningkatkan kapasitas jaringan jalan dan jembatan melalui program konstruksi & rehabilitasi.</li>
+            <li>Menerapkan pengelolaan aset jalan dan jembatan yang transparan dan akuntabel.</li>
+            <li>Mendorong praktik konstruksi ramah lingkungan dan keselamatan kerja.</li>
+          </ol>
+        </div>
+
+        <div style="background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(15,23,42,0.03)">
+          <h3>Tugas Pokok & Fungsi</h3>
+          <p class="muted">Dinas melakukan perencanaan, pelaksanaan, pengawasan, serta pemeliharaan infrastruktur jalan dan konstruksi publik sesuai peraturan daerah dan nasional.</p>
+          <ul class="muted list-compact">
+            <li>Perencanaan teknis jalan dan jembatan.</li>
+            <li>Pelaksanaan proyek konstruksi dan rehabilitasi.</li>
+            <li>Pengelolaan aset dan pemeliharaan jalan/jembatan.</li>
+            <li>Pengawasan mutu dan keselamatan konstruksi.</li>
+            <li>Penyusunan dokumen lelang dan manajemen kontrak.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="struktur">
+      <h2>Struktur Organisasi</h2>
+      <div class="org-grid" style="margin-top:12px">
+        <aside class="org-card" aria-labelledby="kepala-title">
+          <h3 id="kepala-title">Kepala Dinas</h3>
+          <p class="muted">Kepala Dinas memimpin seluruh pelaksanaan tugas, kebijakan, dan koordinasi antar bidang.</p>
+          <div style="margin-top:12px">
+            <div class="role">Sekretariat</div>
+            <p class="muted">Mengelola administrasi, keuangan, kepegawaian, dan layanan umum.</p>
+          </div>
+          <div style="margin-top:12px">
+            <div class="role">Unit Pengelola Teknis Daerah (UPTD)</div>
+            <p class="muted">Pelaksanaan teknis di lapangan untuk pemeliharaan dan pengerjaan kecil.</p>
+          </div>
+        </aside>
+
+        <div>
+          <div class="grid-3">
+            <div class="item" data-type="bidang" data-id="perencanaan">
+              <h4>Bidang Perencanaan & Desain</h4>
+              <p class="muted">Menyiapkan studi kelayakan, gambar kerja, serta standar desain jalan dan jembatan.</p>
+              <div style="margin-top:8px" class="muted-small"><span class="link-inline" data-open data-type="bidang" data-id="perencanaan">Lihat detail</span> • <span class="link-inline" data-newpage data-type="bidang" data-id="perencanaan">Buka di halaman baru</span></div>
+            </div>
+            <div class="item" data-type="bidang" data-id="konstruksi-jalan">
+              <h4>Bidang Konstruksi Jalan</h4>
+              <p class="muted">Pelaksanaan pembangunan dan rehabilitasi jaringan jalan dengan pengawasan mutu.</p>
+              <div style="margin-top:8px" class="muted-small"><span class="link-inline" data-open data-type="bidang" data-id="konstruksi-jalan">Lihat detail</span> • <span class="link-inline" data-newpage data-type="bidang" data-id="konstruksi-jalan">Buka di halaman baru</span></div>
+            </div>
+            <div class="item" data-type="bidang" data-id="konstruksi-jembatan">
+              <h4>Bidang Konstruksi Jembatan</h4>
+              <p class="muted">Perencanaan dan pembangunan struktur jembatan serta inspeksi struktural berkala.</p>
+              <div style="margin-top:8px" class="muted-small"><span class="link-inline" data-open data-type="bidang" data-id="konstruksi-jembatan">Lihat detail</span> • <span class="link-inline" data-newpage data-type="bidang" data-id="konstruksi-jembatan">Buka di halaman baru</span></div>
+            </div>
+            <div class="item" data-type="bidang" data-id="pemeliharaan">
+              <h4>Bidang Pemeliharaan</h4>
+              <p class="muted">Jadwal perawatan rutin, penanganan kerusakan darurat, dan manajemen aset.</p>
+              <div style="margin-top:8px" class="muted-small"><span class="link-inline" data-open data-type="bidang" data-id="pemeliharaan">Lihat detail</span> • <span class="link-inline" data-newpage data-type="bidang" data-id="pemeliharaan">Buka di halaman baru</span></div>
+            </div>
+            <div class="item" data-type="bidang" data-id="pengawasan">
+              <h4>Bidang Pengawasan Mutu & Keselamatan</h4>
+              <p class="muted">Pengujian material, pengawasan lapangan, dan kepatuhan K3.</p>
+              <div style="margin-top:8px" class="muted-small"><span class="link-inline" data-open data-type="bidang" data-id="pengawasan">Lihat detail</span> • <span class="link-inline" data-newpage data-type="bidang" data-id="pengawasan">Buka di halaman baru</span></div>
+            </div>
+            <div class="item" data-type="bidang" data-id="perizinan-hukum">
+              <h4>Bidang Perizinan & Hukum</h4>
+              <p class="muted">Pelayanan perizinan konstruksi, pembinaan peraturan, dan pengelolaan dokumen kontrak.</p>
+              <div style="margin-top:8px" class="muted-small"><span class="link-inline" data-open data-type="bidang" data-id="perizinan-hukum">Lihat detail</span> • <span class="link-inline" data-newpage data-type="bidang" data-id="perizinan-hukum">Buka di halaman baru</span></div>
+            </div>
+          </div>
+
+          <div style="margin-top:14px;background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 20px rgba(15,23,42,0.03)">
+            <h4>Rincian Singkat Tugas Tiap Bidang</h4>
+            <ul class="muted list-compact">
+              <li><strong>Perencanaan & Desain:</strong> Penyusunan TOR, RAB, gambar kerja, dan kajian lingkungan.</li>
+              <li><strong>Konstruksi Jalan:</strong> Manajemen proyek, pengadaan material, kontrol mutu pelaksanaan.</li>
+              <li><strong>Konstruksi Jembatan:</strong> Analisa struktur, inspeksi berkala, perkuatan jembatan.</li>
+              <li><strong>Pemeliharaan:</strong> Program perawatan berkala, penanganan lubang, dan drainase.</li>
+              <li><strong>Pengawasan Mutu & Keselamatan:</strong> Uji laboratorium, audit K3, dan sertifikasi material.</li>
+              <li><strong>Perizinan & Hukum:</strong> Izin bangunan, koordinasi dengan instansi terkait, pengelolaan klaim kontrak.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="layanan" class="services">
+      <h2>Layanan Publik & Dokumen</h2>
+      <div class="grid-3" style="margin-top:12px">
+        <div class="item" data-type="service" data-id="perizinan">
+          <h3>Permohonan Perizinan</h3>
+          <p class="muted">Panduan permohonan Izin Mendirikan Bangunan (IMB) ringan terkait pekerjaan jalan & drainase.</p>
+          <div style="margin-top:8px" class="muted-small"><span class="link-inline" data-open data-type="service" data-id="perizinan">Lihat detail</span> • <span class="link-inline" data-newpage data-type="service" data-id="perizinan">Buka di halaman baru</span></div>
+        </div>
+        <div class="item" data-type="service" data-id="tender">
+          <h3>Informasi Tender & Lelang</h3>
+          <p class="muted">Daftar tender aktif, dokumen lelang, serta tata cara pendaftaran.</p>
+          <div style="margin-top:8px" class="muted-small"><span class="link-inline" data-open data-type="service" data-id="tender">Lihat detail</span> • <span class="link-inline" data-newpage data-type="service" data-id="tender">Buka di halaman baru</span></div>
+        </div>
+        <div class="item" data-type="service" data-id="lapor">
+          <h3>Lapor Kerusakan</h3>
+          <p class="muted">Formulir pelaporan kerusakan jalan/jembatan lengkap dengan opsi upload foto dan lokasi.</p>
+          <div style="margin-top:8px" class="muted-small"><span class="link-inline" data-open data-type="service" data-id="lapor">Lihat detail</span> • <span class="link-inline" data-newpage data-type="service" data-id="lapor">Buka di halaman baru</span></div>
+        </div>
+      </div>
+
+      <div style="margin-top:16px" class="org-card">
+        <h4>Daftar Layanan Lengkap</h4>
+        <ul class="muted list-compact">
+          <li>Perencanaan jalan kabupaten/kota dan jalan kolektor.</li>
+          <li>Penyusunan Rencana Teknis & Gambar Kerja.</li>
+          <li>Pelaksanaan konstruksi jalan, jembatan, dan drainase.</li>
+          <li>Pengadaan dan manajemen kontrak.</li>
+          <li>Pengawasan mutu konstruksi dan uji material.</li>
+          <li>Program pemeliharaan rutin & penanganan darurat.</li>
+          <li>Sosialisasi dan konsultasi publik proyek.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="proyek" class="projects">
+      <h2>Proyek Terbaru</h2>
+      <div style="margin-top:12px;display:flex;flex-direction:column;gap:12px">
+        <article class="project" data-type="project" data-id="p1">
+          <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=600&q=60" alt="Rekonstruksi Jembatan A">
+          <div>
+            <h4>Rekonstruksi Jembatan A</h4>
+            <p class="muted">Perbaikan struktur & peningkatan kapasitas lalu lintas. Status: <strong>Dalam Pengerjaan</strong></p>
+            <div style="margin-top:6px" class="muted-small"><span class="link-inline" data-open data-type="project" data-id="p1">Lihat detail</span> • <span class="link-inline" data-newpage data-type="project" data-id="p1">Buka di halaman baru</span></div>
+          </div>
+        </article>
+
+        <article class="project" data-type="project" data-id="p2">
+          <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=600&q=60" alt="Peningkatan Jalan Kabupaten B">
+          <div>
+            <h4>Peningkatan Jalan Kabupaten B</h4>
+            <p class="muted">Peremajaan permukaan jalan dan sanitasi tepi jalan. Status: <strong>Selesai</strong></p>
+            <div style="margin-top:6px" class="muted-small"><span class="link-inline" data-open data-type="project" data-id="p2">Lihat detail</span> • <span class="link-inline" data-newpage data-type="project" data-id="p2">Buka di halaman baru</span></div>
+          </div>
+        </article>
+
+        <article class="project" data-type="project" data-id="p3">
+          <img src="data:image/jpeg;base64,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" alt="Program Pemeliharaan Jalan Kota">
+          <div>
+            <h4>Program Pemeliharaan Jalan Kota</h4>
+            <p class="muted">Perawatan berkala jalan utama dan pemetaan titik kerusakan prioritas.</p>
+            <div style="margin-top:6px" class="muted-small"><span class="link-inline" data-open data-type="project" data-id="p3">Lihat detail</span> • <span class="link-inline" data-newpage data-type="project" data-id="p3">Buka di halaman baru</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="pengumuman">
+      <h2>Pengumuman & Tender</h2>
+      <ul style="margin-top:12px;list-style:none;padding:0;display:grid;gap:10px">
+        <li style="background:var(--card);padding:12px;border-radius:10px">Pengumuman Lelang Proyek Jalan - <span class="muted">14 September 2025</span> — <span class="link-inline" data-open data-type="announcement" data-id="a1">Dokumen Lelang</span></li>
+        <li style="background:var(--card);padding:12px;border-radius:10px">Pemberitahuan Pemeliharaan Jembatan - <span class="muted">1 Agustus 2025</span> — <span class="link-inline" data-open data-type="announcement" data-id="a2">Rincian Kegiatan</span></li>
+        <li style="background:var(--card);padding:12px;border-radius:10px">Pengumuman Hasil Tender - <span class="muted">20 Juli 2025</span> — <span class="link-inline" data-open data-type="announcement" data-id="a3">Daftar Pemenang</span></li>
+      </ul>
+    </section>
+
+    <section id="kontak">
+      <h2>Hubungi Kami & Lapor Kerusakan</h2>
+      <div style="display:grid;grid-template-columns:1fr 380px;gap:18px;margin-top:12px">
+        <div style="background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(15,23,42,0.03)">
+          <form id="contactForm" onsubmit="return false;" aria-label="Formulir kontak">
+            <label for="name">Nama</label><br>
+            <input id="name" name="name" required style="width:100%;padding:10px;margin:6px 0;border-radius:8px;border:1px solid #e6eef8"><br>
+            <label for="email">Email</label><br>
+            <input id="email" name="email" type="email" required style="width:100%;padding:10px;margin:6px 0;border-radius:8px;border:1px solid #e6eef8"><br>
+            <label for="message">Pesan / Detail Laporan</label><br>
+            <textarea id="message" name="message" required rows="5" style="width:100%;padding:10px;margin:6px 0;border-radius:8px;border:1px solid #e6eef8"></textarea>
+
+            <label for="photo">Unggah Foto (opsional)</label><br>
+            <input id="photo" name="photo" type="file" accept="image/*" style="width:100%;margin:6px 0"><br>
+
+            <label for="location">Lokasi (opsional)</label><br>
+            <input id="location" name="location" placeholder="Koordinat atau alamat" style="width:100%;padding:10px;margin:6px 0;border-radius:8px;border:1px solid #e6eef8"><br>
+
+            <div style="display:flex;gap:8px;align-items:center;margin-top:8px">
+              <button class="btn" id="sendBtn">Kirim</button>
+              <div id="formStatus" class="muted" style="font-size:13px"></div>
+            </div>
+          </form>
+
+          <details style="margin-top:12px">
+            <summary class="muted">Cara kerja pelaporan</summary>
+            <p class="muted">Form ini bersifat simulasi — pada implementasi nyata data akan dikirim ke sistem database Dinas, dan pelapor akan menerima nomor tiket untuk tindak lanjut.</p>
+          </details>
+        </div>
+
+        <aside style="background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(15,23,42,0.03)">
+          <h4>Alamat</h4>
+          <p class="muted">Jl. A.P.Pettarani No.90, Makassar</p>
+          <h4>Telepon</h4>
+          <p class="muted">(0411) 448309</p>
+          <h4>Email</h4>
+          <p class="muted">info@binamarga.example.go.id</p>
+          <h4>Jam Layanan</h4>
+          <p class="muted">Senin—Jumat, 08:00 — 16:00 WITA</p>
+          <div style="margin-top:12px"><a class="chip" href="#pengumuman">Lihat Tender Aktif</a></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>FAQ (Pertanyaan Umum)</h2>
+      <div style="display:grid;gap:10px;margin-top:12px">
+        <details>
+          <summary>Apa syarat mengikuti tender proyek?</summary>
+          <div class="muted">Syarat umum meliputi NPWP, SIUP, NIB, pengalaman teknis, jaminan penawaran, dan dokumen administrasi lain yang tercantum pada dokumen lelang.</div>
+        </details>
+        <details>
+          <summary>Bagaimana proses pelaporan kerusakan?</summary>
+          <div class="muted">Laporkan melalui formulir online, lampirkan foto dan lokasi. Tim akan diverifikasi dan diberikan nomor tiket tindak lanjut.</div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="font-weight:800">Dinas Bina Marga & Bina Konstruksi</div>
+          <div class="muted" style="font-size:13px">© 2025 Pemerintah Daerah</div>
+        </div>
+        <div class="muted">Situs ini menyediakan informasi proyek, layanan, pengumuman, dan formulir kontak. Untuk dokumen resmi, kunjungi kantor kami atau hubungi alamat email resmi.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- modal backdrop -->
+  <div id="modalBackdrop" class="modal-backdrop" role="dialog" aria-hidden="true">
+    <div class="modal" role="document" aria-modal="true">
+      <button class="close" id="modalClose" aria-label="Tutup">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script>
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[data-scroll]').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const href = a.getAttribute('href');
+        const el = document.querySelector(href);
+        if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    });
+
+    // Mobile menu
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('main-nav');
+    menuToggle?.addEventListener('click', ()=>{
+      const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!expanded));
+      if(mainNav.style.display === 'flex') mainNav.style.display = 'none'; else mainNav.style.display = 'flex';
+    });
+
+    // Modal utilities
+    const modal = document.getElementById('modalBackdrop');
+    const modalContent = document.getElementById('modalContent');
+    const modalClose = document.getElementById('modalClose');
+    function openModal(html){
+      modalContent.innerHTML = html;
+      modal.style.display = 'flex';
+      modal.setAttribute('aria-hidden','false');
+      // focus first focusable element
+      const focusable = modal.querySelector('button, [href], input, textarea, [tabindex]');
+      if(focusable) focusable.focus();
+    }
+    function closeModal(){ modal.style.display='none'; modal.setAttribute('aria-hidden','true'); modalContent.innerHTML=''; }
+    modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e)=>{ if(e.target === modal) closeModal(); });
+    document.addEventListener('keydown',(e)=>{ if(e.key === 'Escape') closeModal(); });
+
+    // Data objects for detail pages/modals
+    const DATA = {
+      services: {
+        lapor: {title:'Pelaporan Kerusakan', body:'Formulir pelaporan terperinci. Unggah foto, tambahkan lokasi, dan tim akan memproses laporan. (Simulasi)'},
+        tender: {title:'Informasi Tender & Lelang', body:'Daftar tender aktif, syarat administrasi, dan dokumen lelang. Unduh dokumen melalui tautan resmi ketika tersedia.'},
+        perizinan: {title:'Panduan Perizinan', body:'Panduan lengkap perizinan konstruksi, alur pengajuan, dan dokumen yang dibutuhkan.'},
+        data: {title:'Data & Statistik', body:'Inventaris jaringan jalan, daftar jembatan, dan indikator kondisi infrastruktur.'}
+      },
+      bidang: {
+        'perencanaan':{title:'Bidang Perencanaan & Desain', body:'Tugas: penyusunan TOR, RAB, gambar kerja, kajian lingkungan, pengawasan teknis desain.'},
+        'konstruksi-jalan':{title:'Bidang Konstruksi Jalan', body:'Tugas: manajemen proyek, pelaksanaan konstruksi jalan, kontrol mutu pemeliharaan.'},
+        'konstruksi-jembatan':{title:'Bidang Konstruksi Jembatan', body:'Tugas: analisa struktur, desain jembatan, inspeksi berkala, dan perkuatan struktural.'},
+        'pemeliharaan':{title:'Bidang Pemeliharaan', body:'Tugas: program perawatan berkala, penanganan darurat, dan manajemen aset jalan.'},
+        'pengawasan':{title:'Bidang Pengawasan Mutu & Keselamatan', body:'Tugas: uji material, audit K3, sertifikasi dan inspeksi lapangan.'},
+        'perizinan-hukum':{title:'Bidang Perizinan & Hukum', body:'Tugas: penanganan perizinan, pengelolaan kontrak, dan pembinaan aspek hukum.'}
+      },
+      projects: {
+        p1:{title:'Rekonstruksi Jembatan A', body:'Perkuatan gelagar, perbaikan fondasi, pelebaran jalur dan peningkatan penerangan. Status: Dalam Pengerjaan.'},
+        p2:{title:'Peningkatan Jalan Kabupaten B', body:'Peremajaan permukaan 12 km, penguatan bahu, perbaikan drainase. Status: Selesai.'},
+        p3:{title:'Program Pemeliharaan Jalan Kota', body:'Perawatan berkala jalan utama dan penanganan titik prioritas kerusakan.'}
+      },
+      announcements: {
+        a1:{title:'Pengumuman Lelang Proyek Jalan (14 Sep 2025)', body:'Dokumen lelang dan persyaratan dapat diunduh melalui portal resmi (simulasi).'},
+        a2:{title:'Pemberitahuan Pemeliharaan Jembatan (1 Agu 2025)', body:'Rincian jadwal pemeliharaan dan ruas terdampak.'},
+        a3:{title:'Pengumuman Hasil Tender (20 Jul 2025)', body:'Daftar pemenang dan nilai kontrak proyek.'}
+      }
+    };
+
+    // Generic open by type/id
+    function openDetail(type,id){
+      const src = DATA[type+'s'] || DATA[type];
+      const item = src && src[id];
+      if(!item){ openModal('<h3>Detail tidak ditemukan</h3><p class="muted">Data item tidak tersedia.</p>'); return; }
+      const html = `
+        <div class="detail-grid">
+          <div>
+            <h2>${item.title}</h2>
+            <p class="muted-small">${item.body}</p>
+            <div style="margin-top:12px">
+              <button class="btn" onclick="openInNewWindow('${type}','${id}')">Buka di halaman baru</button>
+              <button style="margin-left:8px" class="btn" onclick="closeModal()">Tutup</button>
+            </div>
+          </div>
+          <aside style="background:var(--bg);padding:12px;border-radius:8px">
+            <h4>Informasi</h4>
+            <p class="muted-small">Tipe: ${type}</p>
+            <p class="muted-small">ID: ${id}</p>
+          </aside>
+        </div>
+      `;
+      openModal(html);
+    }
+
+    // attach listeners for clickable items
+    document.querySelectorAll('[data-open]').forEach(el=>{
+      el.addEventListener('click', ()=>{
+        const type = el.getAttribute('data-type');
+        const id = el.getAttribute('data-id');
+        openDetail(type,id);
+      });
+    });
+    document.querySelectorAll('.card, .project, .item').forEach(el=>{
+      el.addEventListener('click', (e)=>{
+        // avoid double-trigger if inner link clicked
+        if(e.target.closest('[data-open]')||e.target.closest('[data-newpage]')) return;
+        const type = el.getAttribute('data-type');
+        const id = el.getAttribute('data-id');
+        if(type && id) openDetail(type,id);
+      });
+      el.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ const type = el.getAttribute('data-type'); const id = el.getAttribute('data-id'); if(type && id) openDetail(type,id); } });
+    });
+
+    // Open in new window (generate page on the fly)
+    function openInNewWindow(type,id){
+      const src = DATA[type+'s'] || DATA[type];
+      const item = src && src[id];
+      const win = window.open('about:blank','_blank');
+      const html = `<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${item?item.title:'Detail'}</title><style>body{font-family:Inter,system-ui,Arial;padding:24px;color:#0f172a}a{color:#0b5ed7}</style></head><body><a href="#" onclick="window.close();return false;">Tutup jendela</a><h1>${item?item.title:'Detail'}</h1><p>${item?item.body:'Tidak ada data.'}</p><p><small>Halaman dibuat dari aplikasi utama.</small></p></body></html>`;
+      win.document.write(html);
+      win.document.close();
+    }
+
+    // attach data-newpage links
+    document.querySelectorAll('[data-newpage]').forEach(el=>{
+      el.addEventListener('click',(e)=>{ e.stopPropagation(); const type = el.getAttribute('data-type'); const id = el.getAttribute('data-id'); openInNewWindow(type,id); });
+    });
+
+    // contact form simulation (now creates downloadable JSON + shows ticket)
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+    const sendBtn = document.getElementById('sendBtn');
+    sendBtn?.addEventListener('click', (e)=>{
+      e.preventDefault();
+      const n = document.getElementById('Chandra').value.trim();
+      const em = document.getElementById('chandravalentzio@gmail.com').value.trim();
+      const m = document.getElementById('082155047879').value.trim();
+      if(!n||!em||!m){ status.textContent = 'Lengkapi semua kolom.'; status.style.color='red'; return; }
+      const photo = document.getElementById('photo').files[0];
+      const loc = document.getElementById('location').value.trim();
+      const ticket = Math.floor(Math.random()*900000+100000);
+      const payload = {ticket, name:n, email:em, message:m, location:loc, photo: photo?photo.name:null, date: new Date().toISOString()};
+      // create downloadable JSON file (simulates saving)
+      const blob = new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = `laporan_${ticket}.json`; a.click(); URL.revokeObjectURL(url);
+      status.textContent = 'Pesan berhasil dikirim (simulasi). Nomor tiket: ' + ticket; status.style.color='';
+      form.reset();
+      setTimeout(()=>status.textContent='',8000);
+    });
+
+    // Accessibility: enable Enter to open cards
+    document.querySelectorAll('.card, .item, .project').forEach(c=>{ c.setAttribute('tabindex',0); });
+  </script>
+</body>
+</html>
